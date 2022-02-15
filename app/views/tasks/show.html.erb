@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="task-title">
+    <h2><%= @task.title %></h2>
+    <div class="button">
+    <%= link_to edit_task_path(@task) do %>
+    <i class="fas fa-edit"></i> Edit task
+    <% end %>
+    </div>
+  </div>
+  <div class="task-details">
+    <p><%= @task.details %></p>
+  </div>
+
+  <div class="task-completed">
+    <p>This task is <%= @task.completed ? 'completed' : 'not completed yet' %>.
+    </p>
+  </div>
+
+  <%= link_to "back to list", tasks_path %>
+
+</div>
